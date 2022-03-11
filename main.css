@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#4daf54;
+}
+body {
+    font-family:'Open Sans', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to right,var(--primary-color),#3d8880);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    overflow: hidden;
+}
+.product-card{
+    height:400px;
+    width: 320px;
+    background-color:#272d40;
+    border-radius: 15px;
+    padding: 15px 20px;
+    position: relative;
+}
+.product-card:hover .card-img{
+    transform: translateY(-90px) rotate(-25deg);
+}
+.product-card:hover .card-description{
+    transform: translate(-60px,-70px)
+}
+.product-card:hover .card-price{
+    transform: translate(-118px,-70px)
+}
+.product-card:hover .card-container{
+    transform: translateY(-200px);
+    visibility:visible;
+    opacity: 1;
+}
+.card-icon{
+    display:flex;
+    justify-content:space-between;
+    font-size: 20px;
+    color:#fff;
+}
+.card-infor{
+    display:flex;
+    flex-direction: column;
+}
+
+.card-img{
+    transition: 0.5s;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 15px;
+}
+.card-description{
+    transition: 0.5s;
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight:600;
+    text-align: center;
+}
+.card-price{
+    display:block;
+    transition: 0.5s;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+.card-container{
+    transition: 0.4s;
+    position:absolute;
+    margin-top:150px;
+    visibility: hidden;
+    opacity: 0;
+}
+.card-size{
+    color:#fff;
+    margin:25px 0;
+}
+.card-size ul{
+    display: inline-block;
+    list-style: none;
+}
+.card-size ul li{
+    color:#000;
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #dadada;
+    padding:4px 8px;
+    border-radius: 5px;
+}
+
+.card-color{
+    display: flex;
+    color:#fff;
+    margin:25px 0;
+}
+.card-color ul{
+    display:flex;
+    list-style: none;
+}
+.card-color ul li{
+    border-radius: 50%;
+    cursor: pointer;
+    margin:0 5px;
+}
+.color-green{
+    margin-left: 8px !important;
+    width: 20px;
+    height: 20px;
+    background-color:green;
+}
+.color-red{
+    width: 20px;
+    height: 20px;
+    background-color:red;
+}
+.color-black{
+    width: 20px;
+    height: 20px;
+    background-color:black;
+}
+.card-action{
+    margin-top:10px;
+}
+.card-action button{
+    background-color:var(--primary-color);
+    border-style: none;
+    padding:8px;
+    border-radius: 5px;
+}
+.card-action button:first-child{
+    margin-right: 10px;
+}
